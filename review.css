@@ -1,0 +1,302 @@
+img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    box-shadow: 5px 5px rgba(43, 40, 40, 0.5);
+    transform: translateY(-10px);
+}
+
+* {
+    font-family: tahoma;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F0E1;
+}
+
+.nama-web {
+    margin-right: auto;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    padding: 15px;
+    background-color: #5C4033CC;
+    transition-duration: 0.6s;
+    font-size: 20px;
+}
+
+nav.hidden {
+    transform: translateY(-100%) !important;
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 0;
+    letter-spacing: 1px;
+    transition:
+        letter-spacing 0.5s;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+nav:hover {
+    background-color: #5C4033;
+}
+
+nav ul li a:hover {
+    color: black;
+    letter-spacing: 2.5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+        justify-content: space-around;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        padding: 3px 0;
+        letter-spacing: 0.5px;
+    }
+}
+
+#home {
+    margin: 0 auto;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 25px;
+    padding: 10px;
+    border-right: 2px solid black;
+    padding-right: 5px;
+    animation:
+        typingSmooth 3s linear forwards,
+        blink 0.7s step-end infinite;
+}
+
+@keyframes typingSmooth {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 44ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@media (max-width: 768px) {
+    #home {
+        font-size: 20px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    @keyframes typingSmooth {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 44ch;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    #home {
+        font-size: 14px;
+        padding: 2px;
+        text-align: center;
+    }
+
+    .p {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    @keyframes typingSmooth {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 44ch;
+        }
+    }
+}
+
+.p {
+    opacity: 0;
+    animation: fadeIn 6s forwards;
+    text-align: center;
+}
+
+#review {
+    padding: 10px;
+}
+
+.keterangan-buku {
+    margin: 0 0 30px 10px;
+}
+
+.daftar-buku {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    justify-items: center;
+}
+
+.buku1,
+.buku2,
+.buku3,
+.buku4 {
+    background-color: #5C4033CC;
+    padding: 10px;
+    border: 3px solid transparent;
+    margin: 10px;
+    border-radius: 20px;
+    color: white;
+    max-width: 100%;
+    box-shadow: transparent;
+}
+
+.buku1:hover,
+.buku2:hover,
+.buku3:hover,
+.buku4:hover {
+    box-shadow: 5px 5px rgba(43, 40, 40, 0.5);
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .daftar-buku {
+        grid-template-columns: 1fr;
+        /* Satu kolom di layar kecil */
+        gap: 10px;
+    }
+
+    .buku1,
+    .buku2,
+    .buku3,
+    .buku4 {
+        padding: 5px;
+    }
+}
+
+#about {
+    background-color: transparent;
+    transition-duration: 0.8s;
+}
+
+#about:hover {
+    text-align: justify;
+    padding: 25px;
+    background-color: #5C4033CC;
+    border-radius: 100px;
+    color: white;
+}
+
+.a {
+    margin-left: 12px;
+}
+
+.deskripsi1,
+.deskripsi2 {
+    text-align: justify;
+    padding: 10px;
+    font-size: 25px;
+}
+
+footer {
+    background-color: #5C4033CC;
+    padding: 10px;
+    margin: 10px 0 0 0;
+}
+
+.judul-web {
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+
+.teks {
+    padding: 5px 0 0 0;
+    text-align: center;
+}
+
+.sosmed {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sosmed a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    transition: letter-spacing 0.5s;
+}
+
+.sosmed a:hover {
+    letter-spacing: 2.5px;
+    font-weight: bold;
+}
+
+.sosmed p:not(:last-child) {
+    padding-right: 15px;
+    margin-right: 15px;
+    border-right: 3px solid black;
+}
+
+.copyright {
+    text-align: center;
+}
+
