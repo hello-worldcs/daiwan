@@ -64,8 +64,7 @@ nav:hover {
 }
 
 nav ul li a:hover {
-    color: black;
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
 }
 
 @keyframes fadeIn {
@@ -150,13 +149,13 @@ nav ul li a:hover {
 
 @media (max-width: 480px) {
     #home {
-        font-size: 14px;
+        font-size: 16px;
         padding: 2px;
         text-align: center;
     }
 
     .p {
-        font-size: 10px;
+        font-size: 11px;
         text-align: center;
     }
 
@@ -166,7 +165,7 @@ nav ul li a:hover {
         }
 
         to {
-            width: 44ch;
+            width: 37.8ch;
         }
     }
 }
@@ -309,3 +308,4 @@ footer {
 .copyright {
     text-align: center;
 }
+
