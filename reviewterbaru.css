@@ -13,11 +13,11 @@ body {
 nav {
     background-color: #5C4033CC;
     padding: 15px;
-    transition:background-color 0.6s ease ;
+    transition: background-color 0.6s ease;
 }
 
 nav:hover {
-    background-color:#5C4033;
+    background-color: #5C4033;
 }
 
 nav ul {
@@ -72,7 +72,7 @@ nav ul li a {
 
 .rak-buku {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     padding: 10px;
 }
@@ -81,17 +81,17 @@ nav ul li a {
     background-color: #ffffff;
     border-radius: 14px;
     overflow: hidden;
-    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.bukunya:hover {
+.bukunya:active {
     box-shadow: 7px 7px 10px rgba(43, 40, 40, 0.7);
-    transform: translateY(-5px) scale(1.05);
+    transform: scale(0.95);
 }
 
 img {
     width: 100%;
-    height: 225px;
+    height: 500px;
     object-fit: cover;
     display: block;
 }
@@ -100,7 +100,7 @@ img {
     background-color: #ffffff;
     color: #1a1a1a;
     padding: 10px 12px 12px;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.5;
 }
 
@@ -111,16 +111,10 @@ img {
     line-height: 1.4;
     margin-bottom: 10px;
     transition: background-color 1s ease,
-                color 1s ease,
-                padding 1s ease,
-                border-radius 1s ease;
-}
-
-#about:hover {
-    background-color: #5C4033CC;
-    padding: 10px 50px 25px 50px;
-    border-radius: 100px;
-    color: white;
+        color 1s ease,
+        padding 1s ease,
+        border-radius 1s ease,
+        transform 1s ease;
 }
 
 footer {
@@ -181,7 +175,7 @@ footer {
     }
 
     img {
-        height: 250px;
+        height: 525px;
     }
 }
 
@@ -195,7 +189,7 @@ footer {
     }
 
     img {
-        height: 300px;
+        height: 600px;
     }
 }
 
@@ -232,6 +226,11 @@ footer {
     img {
         width: 100%;
         height: 250px;
+    }
+
+    .bukunya:active {
+        box-shadow: 7px 7px 10px rgba(43, 40, 40, 0.7);
+        transform: translateY(-5px) scale(1.05);
     }
 
     .isi-buku {
@@ -280,11 +279,14 @@ footer {
         padding: 20px;
     }
 
+    .bukunya:hover {
+        box-shadow: 7px 7px 10px rgba(43, 40, 40, 0.7);
+        transform: translateY(-5px) scale(1.05);
+    }
+
     img {
         width: 100%;
         height: 350px;
-        object-fit: cover;
-        display: block;
     }
 
     .isi-buku {
@@ -296,6 +298,14 @@ footer {
         font-size: 18px;
         padding: 0 20px 20px 20px;
     }
+
+    #about:hover {
+    background-color: #5C4033CC;
+    transform: scale(0.95);
+    padding: 10px 50px 25px 50px;
+    border-radius: 100px;
+    color: white;
+}
 
     footer {
         font-size: 15px;
