@@ -1,8 +1,42 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn1 {
+    from {
+        opacity: 0;
+        transform: translateY(-70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn2 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: tahoma;
+    font-family: 'Lato', tahoma, sans-serif;
 }
 
 body {
@@ -14,6 +48,7 @@ nav {
     background-color: #5C4033CC;
     padding: 15px;
     transition: background-color 0.6s ease;
+    animation: fadeIn1 2s ease-out;
 }
 
 nav:hover {
@@ -27,15 +62,6 @@ nav ul {
     list-style: none;
 }
 
-nav ul a {
-    letter-spacing: 1px;
-    transition: letter-spacing 0.5s ease;
-}
-
-nav ul a:hover {
-    letter-spacing: 4px;
-}
-
 .nama-web {
     margin-right: auto;
     font-weight: bold;
@@ -44,6 +70,11 @@ nav ul a:hover {
 nav ul li a {
     text-decoration: none;
     color: white;
+    letter-spacing: 0px;
+    transition: letter-spacing 0.5s ease;
+}
+nav ul li a:hover {
+    letter-spacing: 4px;
 }
 
 #home {
@@ -55,6 +86,7 @@ nav ul li a {
     text-align: center;
     justify-content: center;
     font-size: 34px;
+    animation: fadeIn 3.2s ease-in;
 }
 
 .isi-desk {
@@ -62,12 +94,14 @@ nav ul li a {
     justify-content: center;
     margin-top: 5px;
     font-size: 12px;
+    animation: fadeIn 3.2s ease-in;
 }
 
 #buku {
     border-top: 1px solid #D6C9B0;
     border-bottom: 1px solid #D6C9B0;
     padding: 20px 0;
+    animation: fadeIn 3.2s ease-in;
 }
 
 .rak-buku {
@@ -75,6 +109,7 @@ nav ul li a {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     padding: 10px;
+    animation: fadeIn2 2.2s ease-out;
 }
 
 .bukunya {
@@ -88,6 +123,7 @@ nav ul li a {
 .bukunya:active {
     box-shadow: 7px 7px 10px rgba(43, 40, 40, 0.7);
     transform: scale(0.95);
+    transition: transform 0s, box-shadow 0s;
 }
 
 img {
@@ -116,13 +152,16 @@ img {
         padding 1s ease,
         border-radius 1s ease,
         transform 1s ease;
+    animation: fadeIn2 2.2s ease-out;
 }
+
 
 footer {
     padding: 5px 0;
     background-color: #5C4033CC;
     color: white;
     font-size: 12px;
+    animation: fadeIn2 2.2s ease-out;
 }
 
 .title {
@@ -139,10 +178,10 @@ footer {
 
 .sosmed a {
     text-decoration: none;
-    font-style: none;
+    font-style: normal;
     color: white;
     letter-spacing: 0;
-    transition: letter-spacing 0.5s ease, font-weight ease, underline 0.5s ease;
+    transition: letter-spacing 0.5s ease, font-weight 0.3s ease;
 }
 
 .sosmed a:hover {
@@ -215,7 +254,6 @@ footer {
     }
 
     .rak-buku {
-        display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         padding: 10px;
@@ -248,9 +286,6 @@ footer {
     }
 
     footer {
-        padding: 5px 0;
-        background-color: #5C4033CC;
-        color: white;
         font-size: 15px;
     }
 }
@@ -278,7 +313,6 @@ footer {
     }
 
     .rak-buku {
-        display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 25px;
         padding: 20px;
@@ -326,7 +360,6 @@ footer {
 
 @media (min-width: 1280px) {
     img {
-        width: 100%;
         height: 450px;
     }
 }
